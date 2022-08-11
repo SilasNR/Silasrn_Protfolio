@@ -46,8 +46,8 @@ body{
 .center-conteiner{
   padding-top: 20px;
   height: 700px;
-  width: 100vw;
-  z-index: 2;
+  width: 100%;
+  padding: 40px;
 }
 
 .center-menu{
@@ -61,14 +61,18 @@ ul{
   margin: 0;
   padding: 0;
   width: 100%;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
 }
 
 li{
   height: 60px;
   width: 80%;
   display: block;
-  color: #000;
-  padding: 8px 16px;
+  color: var(--cor_escura);
+  padding-right: 10px;
   text-decoration: none;
   transition: width 2s;
   color: var(--cor_escura);
