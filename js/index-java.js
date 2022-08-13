@@ -23,7 +23,7 @@ function esconderInformacoes(v){
   conProjetos.style.visibility= "hidden";
 }
 
-/*---------------  menu que for selecionado -------->>>>>>>>*/
+/*--------------- Quando o menu for selecionado -------->>>>>>>>*/
 document.querySelectorAll(".center-menu").forEach( function(button) {
     button.addEventListener("click", function(event) {
     const el = event.target || event.srcElement;
