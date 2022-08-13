@@ -76,8 +76,9 @@ ul{
 }
 
 li{
+  line-height: 50px;
   height: 60px;
-  width: 80%;
+  width: 88%;
   color: var(--cor_escura);
   padding-left: 40px;
   text-decoration: none;
@@ -87,20 +88,22 @@ li{
 }
 
 li:hover{
-  width: 90%;
-  background-color: var(--cor_escura);
+  width: 89%;
+  background-color: var(--cor_media);
   color: var(--cor_clara);
 }
 
 .center-conteudo{
-  display: flex;
-  align-items: center;
-
+  z-index: -1;
   margin-left: 10px;
   height: auto;
   width: 70%;
   font-family: Corbel,fantasy;
   border: 1px solid black;
+}
+
+section{
+  margin-left: 30px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -124,8 +127,8 @@ li:hover{
     float: left;
   }
   li:hover{
-    width: 92%;
-    background-color: var(--cor_escura);
+    width: 90%;
+    background-color: var(--cor_media);
     color: var(--cor_clara);
   }
 
