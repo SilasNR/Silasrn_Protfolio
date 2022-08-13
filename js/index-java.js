@@ -36,7 +36,7 @@ function menuSelecionado(id){
   switch (id) {
     case "menuSobre":
       esconderInformacoes(1);
-      conSobre.style.visibility= "visible";
+      mudancas(conSobre);
       break;
 
     case "menuConhecimento":
@@ -50,4 +50,11 @@ function menuSelecionado(id){
       break;
     default:
   }
+}
+
+function mudancas(elemento){
+  elemento.style.visibility= "visible";
+  elemento.style.background-color = "var(--cor_media)";
+  elemento.style.color = "var(--cor_clara)";
+  elemento.style.width = "89%";
 }
