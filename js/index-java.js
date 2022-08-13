@@ -1,3 +1,5 @@
+console.log("conectado");
+
 const conSobre = document.getElementById("conSobre");
 const conConhecimentos = document.getElementById('conConhecimentos');
 const conProjetos = document.getElementById('conProjetos');
@@ -11,7 +13,6 @@ document.addEventListener("scroll", function() {
   }
 });
 /*-------^^^^^^^^^^^^^^^^^^^^ Posição do scroll*/
-
 
 /*----  Quando a Página carregar ----------->>>>>>>>>>*/
 function esconderInformacoes(v){
@@ -36,7 +37,7 @@ function menuSelecionado(id){
   switch (id) {
     case "menuSobre":
       esconderInformacoes(1);
-      
+      mudancas(conSobre, menuSobre);
       break;
 
     case "menuConhecimento":
@@ -52,9 +53,9 @@ function menuSelecionado(id){
   }
 }
 
-function mudancas(elemento){
+function mudancas(elemento, menuElemento){
   elemento.style.visibility= "visible";
-  elemento.style.background-color = "var(--cor_media)";
-  elemento.style.color = "var(--cor_clara)";
-  elemento.style.width = "89%";
+  menuElemento.style.background = "var(--cor_media)";
+  menuElemento.style.color = "var(--cor_clara)";
+  menuElemento.style.width = "89%";
 }
