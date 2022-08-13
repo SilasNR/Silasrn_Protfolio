@@ -36,7 +36,7 @@ function menuSelecionado(id){
   switch (id) {
     case "menuSobre":
       esconderInformacoes(1);
-      mudancas(conSobre);
+      
       break;
 
     case "menuConhecimento":
