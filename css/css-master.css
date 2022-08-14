@@ -5,7 +5,7 @@
 }
 
 html{
-  overflow-x: hidden; /* Esconde a Scrollbar*/
+/*  overflow-x: hidden; /* Esconde a Scrollbar*/
   overflow-y: scroll auto;
 }
 
@@ -104,6 +104,31 @@ li:hover{
 
 section{
   margin-left: 30px;
+}
+
+#conClike{
+  z-index: 1;
+  position: absolute;
+}
+
+#conSobre{
+  min-width: 60%;
+  max-width: var(.center-conteudo);
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#conConhecimentos{
+  z-index: 3;
+  position: absolute;
+}
+
+#conProjetos{
+  z-index: 4;
+  position: absolute;
 }
 
 @media only screen and (max-width: 768px) {
