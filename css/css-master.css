@@ -112,7 +112,7 @@ section{
 }
 
 #conSobre{
-  min-width: 60%;
+  min-width: 55%;
   max-width: var(.center-conteudo);
   z-index: 2;
   position: absolute;
