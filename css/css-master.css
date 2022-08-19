@@ -5,7 +5,7 @@
 }
 
 html{
-  overflow-x: hidden; /* Esconde a Scrollbar*/
+  /*overflow-x: hidden; /* Esconde a Scrollbar*/
   overflow-y: scroll auto;
 }
 
@@ -29,7 +29,7 @@ body{
   background-color: var(--cor_escura);
   color: var(--cor_clara);
 
-  max-width: 100vw;
+  max-width: calc(100vw - 8px);
   width: 100vw;
   height: 250px;
 
@@ -48,8 +48,8 @@ body{
   padding-top: 20px;
   max-height: 700px;
   height: auto;
-  max-width: calc(100vw - 4%);
-  width: 100%;
+  border: 1px black solid;
+  width: auto;
   padding: 20px 2%;
   display: flex;
   flex-direction: row;
@@ -100,6 +100,7 @@ li:hover{
   width: 70%;
   font-family: Corbel,fantasy;
   border: 1px solid black;
+
 }
 
 section{
@@ -112,7 +113,7 @@ section{
 }
 
 #conSobre{
-  min-width: 55%;
+  min-width: 53%;
   max-width: var(.center-conteudo);
   z-index: 2;
   position: absolute;
@@ -132,10 +133,69 @@ section{
 }
 
 .habilidade-conteiner{
-  width: 100vw;
-  height: 600px;
+  padding:0 0 40px 0;
   background-color: var(--cor_escura);
-  border: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-h{
+  text-align: center;
+  font-size: 40px;
+  font-family: "Heavitas", fantasy, sans-serif;
+  color: var(--cor_clara);
+}
+
+.animacao-h{
+  width: 50%;
+  height: 400px;
+  float: left;
+  margin-left: 4px;
+}
+
+.bloco{
+  position:absolute;
+  height: 180px;
+  width: 180px;
+  color: var(--cor_clara);
+  animation-name: aniBlocos;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: width 2s, height 4s;
+}
+
+.b1{
+  background-color: yellow;
+  animation-delay: -12s;
+}
+
+.b2{
+  background-color: orange;
+  animation-delay: -8s;
+}
+
+.b3{
+  background-color: blue;
+  animation-delay: -4s;
+}
+
+@keyframes aniBlocos {
+  0%    {top: 805px; left: 17%; z-index: 0;}
+  25%   {top: 800px; left: 32%; z-index: 1; height: 200px;}
+  50%   {top: 775px; left: 17%; z-index: 2; height: 250px;}
+  75%   {top: 800px; left: 2%;  z-index: 1; height: 200px;}
+  100%  {top: 805px; left: 17%; z-index: 0;}
+}
+
+.conteudo-h{
+  width: 49%;
+  height: 400px;
+  color: var(--cor_clara);
+  border: 1px solid var(--cor_clara);
+  float: right;
+  margin-right: 4px;
 }
 
 @media only screen and (max-width: 768px) {
