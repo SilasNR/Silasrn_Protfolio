@@ -217,15 +217,16 @@ section{
 }
 
 .conteudo-h{
-  width: 49%;
+  width: 39%;
   height: 400px;
   color: var(--cor_clara);
-  border: 1px solid var(--cor_clara);
+  /*border: 1px solid var(--cor_clara);*/
   float: right;
   margin-right: 4px;
+  padding-left: 40px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {/*para celular*/
   /* Para Celulares*/
   #top-titulo-cabecalho{
     font-size: 80px;
@@ -254,5 +255,34 @@ section{
   .center-conteudo{
     width: 100%;
     margin: 10px 0 0 0;
+  }
+
+  .habilidade-conteiner{
+    flex-direction: column;
+  }
+
+  .titulo-h{
+    font-size: 20px;
+  }
+
+  .bloco{
+      animation-name: aniBlocos-m;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      transition: width 2s, height 4s;
+  }
+
+  @keyframes aniBlocos-m {
+    0%    {top: 905px; left: 17%; z-index: 0;}
+    25%   {top: 900px; left: 32%; z-index: 1; height: 200px;}
+    50%   {top: 875px; left: 17%; z-index: 2; height: 250px;}
+    75%   {top: 900px; left: 2%;  z-index: 1; height: 200px;}
+    100%  {top: 905px; left: 17%; z-index: 0;}
+  }
+
+  .conteudo-h{
+    float: left;
+    width:80%;
   }
 }
