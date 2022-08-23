@@ -48,7 +48,7 @@ body{
   padding-top: 20px;
   max-height: 700px;
   height: auto;
-  max-width: calc(100vw - 4%);
+  max-width: calc(100vw - 35px);
   width: 100%;
   padding: 20px 2%;
   display: flex;
@@ -104,10 +104,12 @@ li:hover{
 
 section{
   margin-left: 30px;
+  width: 100%;
+  max-width: 62%;
 }
 
 .bloco-conteudo{
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -127,13 +129,12 @@ section{
 
 }
 
-
 #conFormacao{
   z-index: 3;
   position: absolute;
 }
 
-#conCarreira{
+#conExperiencia{
   z-index: 4;
   position: absolute;
 }
@@ -167,5 +168,9 @@ section{
   .center-conteudo{
     width: 100%;
     margin: 10px 0 0 0;
+  }
+
+  section{
+    max-width: 90%;
   }
 }

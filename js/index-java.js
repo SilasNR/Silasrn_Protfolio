@@ -1,6 +1,6 @@
 const conSobre = document.getElementById("conSobre");
 const conFormacao = document.getElementById('conFormacao');
-const conCarreira = document.getElementById('conCarreira');
+const conExperiencia = document.getElementById('conExperiencia');
 const conClike = document.getElementById('conClike');
 
 document.addEventListener("scroll", function() {
@@ -20,7 +20,7 @@ function esconderInformacoes(v){
   }
   conSobre.style.visibility= "hidden";
   conFormacao.style.visibility= "hidden";
-  conCarreira.style.visibility= "hidden";
+  conExperiencia.style.visibility= "hidden";
 }
 
 /*--------------- Quando o menu for selecionado -------->>>>>>>>*/
@@ -44,9 +44,9 @@ function menuSelecionado(id){
       conFormacao.style.visibility= "visible";
       break;
 
-    case "menuCarreira":
+    case "menuExperiencia":
       esconderInformacoes(1);
-      conCarreira.style.visibility= "visible";
+      conExperiencia.style.visibility= "visible";
       break;
     default:
   }
