@@ -68,9 +68,9 @@ font-size: 150px;
   padding-top: 20px;
   max-height: 700px;
   height: auto;
-  border: 1px black solid;
-  width: auto;
-  padding: 50px 2%;
+  max-width: calc(100vw - 35px);
+  width: 100%;
+  padding: 20px 2%;
   display: flex;
   flex-direction: row;
 }
@@ -125,10 +125,12 @@ li:hover{
 
 section{
   margin-left: 30px;
+  width: 100%;
+  max-width: 62%;
 }
 
 .bloco-conteudo{
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -148,13 +150,12 @@ section{
 
 }
 
-
 #conFormacao{
   z-index: 3;
   position: absolute;
 }
 
-#conCarreira{
+#conExperiencia{
   z-index: 4;
   position: absolute;
 }
@@ -257,32 +258,7 @@ section{
     margin: 10px 0 0 0;
   }
 
-  .habilidade-conteiner{
-    flex-direction: column;
-  }
-
-  .titulo-h{
-    font-size: 20px;
-  }
-
-  .bloco{
-      animation-name: aniBlocos-m;
-      animation-duration: 12s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      transition: width 2s, height 4s;
-  }
-
-  @keyframes aniBlocos-m {
-    0%    {top: 905px; left: 17%; z-index: 0;}
-    25%   {top: 900px; left: 32%; z-index: 1; height: 200px;}
-    50%   {top: 875px; left: 17%; z-index: 2; height: 250px;}
-    75%   {top: 900px; left: 2%;  z-index: 1; height: 200px;}
-    100%  {top: 905px; left: 17%; z-index: 0;}
-  }
-
-  .conteudo-h{
-    float: left;
-    width:80%;
+  section{
+    max-width: 90%;
   }
 }
