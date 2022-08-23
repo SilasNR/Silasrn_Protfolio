@@ -96,7 +96,7 @@ li:hover{
 .center-conteudo{
   z-index: -1;
   margin-left: 10px;
-  height: auto;
+  height: 210px;
   width: 70%;
   font-family: Corbel,fantasy;
   border: 1px solid black;
@@ -104,6 +104,12 @@ li:hover{
 
 section{
   margin-left: 30px;
+}
+
+.bloco-conteudo{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #conClike{
@@ -117,16 +123,17 @@ section{
   z-index: 2;
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
 }
 
 
-#conConhecimentos{
+#conFormacao{
   z-index: 3;
   position: absolute;
 }
 
-#conProjetos{
+#conCarreira{
   z-index: 4;
   position: absolute;
 }

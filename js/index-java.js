@@ -1,6 +1,6 @@
 const conSobre = document.getElementById("conSobre");
-const conConhecimentos = document.getElementById('conConhecimentos');
-const conProjetos = document.getElementById('conProjetos');
+const conFormacao = document.getElementById('conFormacao');
+const conCarreira = document.getElementById('conCarreira');
 const conClike = document.getElementById('conClike');
 
 document.addEventListener("scroll", function() {
@@ -19,8 +19,8 @@ function esconderInformacoes(v){
     conClike.style.visibility = "hidden";
   }
   conSobre.style.visibility= "hidden";
-  conConhecimentos.style.visibility= "hidden";
-  conProjetos.style.visibility= "hidden";
+  conFormacao.style.visibility= "hidden";
+  conCarreira.style.visibility= "hidden";
 }
 
 /*--------------- Quando o menu for selecionado -------->>>>>>>>*/
@@ -39,14 +39,14 @@ function menuSelecionado(id){
       conSobre.style.visibility= "visible";
       break;
 
-    case "menuConhecimento":
+    case "menuFormacao":
       esconderInformacoes(1);
-      conConhecimentos.style.visibility= "visible";
+      conFormacao.style.visibility= "visible";
       break;
 
-    case "menuProjetos":
+    case "menuCarreira":
       esconderInformacoes(1);
-      conProjetos.style.visibility= "visible";
+      conCarreira.style.visibility= "visible";
       break;
     default:
   }
