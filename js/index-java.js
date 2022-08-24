@@ -1,3 +1,5 @@
+console.log("conectado");
+
 const conSobre = document.getElementById("conSobre");
 const conFormacao = document.getElementById('conFormacao');
 const conExperiencia = document.getElementById('conExperiencia');
@@ -11,7 +13,6 @@ document.addEventListener("scroll", function() {
   }
 });
 /*-------^^^^^^^^^^^^^^^^^^^^ Posição do scroll*/
-
 
 /*----  Quando a Página carregar ----------->>>>>>>>>>*/
 function esconderInformacoes(v){
@@ -36,7 +37,7 @@ function menuSelecionado(id){
   switch (id) {
     case "menuSobre":
       esconderInformacoes(1);
-      conSobre.style.visibility= "visible";
+      mudancas(conSobre, menuSobre);
       break;
 
     case "menuFormacao":
@@ -50,4 +51,11 @@ function menuSelecionado(id){
       break;
     default:
   }
+}
+
+function mudancas(elemento, menuElemento){
+  elemento.style.visibility= "visible";
+  menuElemento.style.background = "var(--cor_media)";
+  menuElemento.style.color = "var(--cor_clara)";
+  menuElemento.style.width = "89%";
 }
