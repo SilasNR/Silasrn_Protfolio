@@ -176,12 +176,12 @@ section{
 
 }
 
-.titulo-h{
+.titulo{
   text-align: center;
   font-size: 40px;
   font-family: "Heavitas", fantasy, sans-serif;
-  color: var(--cor_clara);
 }
+
 
 .animacao-h{
   width: 50%;
@@ -231,6 +231,33 @@ section{
   float: right;
   margin-right: 4px;
   padding-left: 40px;
+}
+
+.projetos{
+  width: 100%;
+  height: auto;
+  border: dashed 10px var(--cor_media);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.es{
+  height: 200px;
+  width: 200px;
+  border: dashed 20px rgb(0,0,0,0.2);
+  margin: 10px;
+}
+
+footer{
+  background-color: var(--cor_escura);
+  margin-top: 100px;
+  height: 500px;
+  max-width: calc(100vw - 5px);
+  width: 100vw;
 }
 
 @media only screen and (max-width: 768px) {/*para celular*/
