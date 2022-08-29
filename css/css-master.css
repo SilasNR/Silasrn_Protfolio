@@ -173,7 +173,6 @@ section{
 .centro-h{
   display: flex;
   flex-direction:
-
 }
 
 .titulo{
@@ -234,7 +233,7 @@ section{
 }
 
 .projetos{
-  width: 100%;
+  max-height: none;
   height: auto;
   border: dashed 10px var(--cor_media);
   padding: 20px;
@@ -245,11 +244,24 @@ section{
   align-content: space-between;
 }
 
-.es{
+.temporario{
+  opacity: 25%;
+  font-family: "Heavitas", fantasy, sans-serif;
+}
+
+.espaco{
   height: 200px;
   width: 200px;
-  border: dashed 20px rgb(0,0,0,0.2);
   margin: 10px;
+  font-family: "Heavitas", fantasy, sans-serif;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 0px black;
+  transition: 0.2s;
+}
+.espaco:hover{
+  box-shadow: 3px 5px 5px 1px black;
 }
 
 footer{
@@ -258,6 +270,17 @@ footer{
   height: 500px;
   max-width: calc(100vw - 5px);
   width: 100vw;
+}
+
+.links-contato{
+  width: 20%;
+  height: auto;
+  background-color: var(--cor_clara);
+}
+
+.img{
+  width: 100px;
+  height: 100px;
 }
 
 @media only screen and (max-width: 768px) {/*para celular*/
