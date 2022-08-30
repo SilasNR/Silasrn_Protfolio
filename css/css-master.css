@@ -267,20 +267,34 @@ section{
 footer{
   background-color: var(--cor_escura);
   margin-top: 100px;
-  height: 500px;
+  height: 160px;
   max-width: calc(100vw - 5px);
   width: 100vw;
 }
 
 .links-contato{
-  width: 20%;
+  width: 15%;
   height: auto;
   background-color: var(--cor_clara);
+  border-radius: 40px 0 0 40px;
+  position: relative;
+  top: 30%;
+  float: right;
+
 }
 
 .img{
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
+}
+
+.direitos{
+  color: var(--cor_clara);
+  height: auto;
+  position: relative;
+  text-align: center;
+  padding-left: 15%;
+  top: 80%;
 }
 
 @media only screen and (max-width: 768px) {/*para celular*/
