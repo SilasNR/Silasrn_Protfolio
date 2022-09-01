@@ -18,28 +18,28 @@ document.addEventListener("scroll", function() {
   const posicaoy = window.pageYOffset;
   console.log(posicaoy);
   diminuirBarr(posicaoy);
-  verifica(posicaoy);
+  diminuirTitulo(posicaoy);
   trocarCor(posicaoy);
   //subDes(posicaoy);
 });
 
 function diminuirBarr(posicaoy){
-  if (posicaoy > 150){//ida
-    console.log("no");
+  if (posicaoy > 190){//ida
+    console.log(posicaoy);
     cabecalho.style.position = "fixed";
-    cabecalho.style.height = "100px";
+    cabecalho.style.height = "60px";
     centroSobre.style.paddingTop = "300px";
   }
-  if (posicaoy < 150){//volta
+  if (posicaoy < 190){//volta
     cabecalho.style.position = "static";
     cabecalho.style.height = "250px";
     centroSobre.style.paddingTop = "50px";
   }
 }
 
-function verifica(posicaoy) {
+function diminuirTitulo(posicaoy) {
   if (posicaoy > 5) {
-    tituloS.style.fontSize = "95px";
+    tituloS.style.fontSize = "55px";
     tituloS.style.top="0px";
     tituloP.style.top = "-100px";
   }
@@ -86,15 +86,6 @@ function trocarCor(posicaoy){
 }
 /*-------^^^^^^^^^^^^^^^^^^^^ Posição do scroll*/
 
-/*----  Quando a Página carregar ----------->>>>>>>>>>*/
-function esconderInformacoes(v){
-  if(v){
-    conClike.style.visibility = "hidden";
-  }
-  conSobre.style.visibility= "hidden";
-  conFormacao.style.visibility= "hidden";
-  conExperiencia.style.visibility= "hidden";
-}
 
 /*--------------- Quando o menu for selecionado -------->>>>>>>>*/
 document.querySelectorAll(".center-menu").forEach( function(button) {
@@ -107,27 +98,48 @@ document.querySelectorAll(".center-menu").forEach( function(button) {
 
 function menuSelecionado(id){
   switch (id) {
+
     case "menuSobre":
-      esconderInformacoes(1);
-      mudancas(conSobre, menuSobre);
+      esconderInformacoes(id);
+      selecionado(conSobre, id);
       break;
 
     case "menuFormacao":
-      esconderInformacoes(1);
-      conFormacao.style.visibility= "visible";
+      esconderInformacoes(id);
+      selecionado(conFormacao, id);
       break;
 
     case "menuExperiencia":
-      esconderInformacoes(1);
-      conExperiencia.style.visibility= "visible";
+      esconderInformacoes(id);
+      selecionado(conExperiencia, id);
       break;
     default:
   }
 }
 
-function mudancas(elemento, menuElemento){
+function selecionado(elemento, menuElemento){
   elemento.style.visibility= "visible";
-  menuElemento.style.background = "var(--cor_media)";
-  menuElemento.style.color = "var(--cor_clara)";
-  menuElemento.style.width = "89%";
+  //selecione["manter"](menuElemento);
 }
+
+function esconderInformacoes(id){
+  conClike.style.visibility = "hidden";
+  conSobre.style.visibility= "hidden";
+  conFormacao.style.visibility= "hidden";
+  conExperiencia.style.visibility= "hidden";
+//  selecione["soltar"](id);
+}
+
+/*const selecione = {
+  manter: function(menuElemento){
+    document.getElementById(menuElemento).style.background = "var(--cor_media)";
+    document.getElementById(menuElemento).style.color = "var(--cor_clara)";
+    document.getElementById(menuElemento).style.width = "89%";
+  },
+  soltar: function(menuElemento){
+      document.getElementById(menuElemento).style.background = "var(--cor_clara)";
+      document.getElementById(menuElemento).style.color = "var(--cor_escura)";
+      document.getElementById(menuElemento).style.width = "88%";
+  }
+}
+*/
