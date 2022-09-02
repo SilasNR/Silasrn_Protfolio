@@ -24,6 +24,7 @@ html::-webkit-scrollbar-thumb {
 body{
   background-color: var(--cor_clara);
   margin: 0;
+  user-select: none;
 }
 
 
@@ -35,7 +36,6 @@ body{
   width: 100vw;
   height: 250px;
   position: static;
-  user-select: none;
 
   z-index: 3;
 
