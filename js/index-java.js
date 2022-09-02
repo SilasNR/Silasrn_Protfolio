@@ -28,12 +28,12 @@ function diminuirBarr(posicaoy){
     console.log(posicaoy);
     cabecalho.style.position = "fixed";
     cabecalho.style.height = "60px";
-    centroSobre.style.paddingTop = "300px";
+    centroSobre.style.paddingTop = "270px";
   }
   if (posicaoy < 190){//volta
     cabecalho.style.position = "static";
     cabecalho.style.height = "250px";
-    centroSobre.style.paddingTop = "50px";
+    centroSobre.style.paddingTop = "20px";
   }
 }
 
